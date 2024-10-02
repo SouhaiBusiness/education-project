@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<title>Morrocan.University</title>
+
+	<!-- iconscout cdn rel link-->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+	<!-- google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Rancho&display=swap" rel="stylesheet"> 
+
+<!-- Swiper cdn-->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+<style type="text/css">
+			@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+	font-family: 'spartan', sans-serif;
+}
+:root{
+	--color-primary: #6c63ff;
+	--color-success: #00bf8e;
+	--color-warning: #f7c94b;
+	--color-danger: #f75842;
+	--color-danger-variant: rgba(247, 88, 66, 0.4);
+	--color-white: #fff;
+	--color-light: rgba(255, 255, 255, 0.7);
+	--color-black: #000;
+	--color-bg: #1f2641;
+    --color-bg1: #2e3267;
+	--color-bg2: #424890;
+
+	--container-width-lg: 80%;
+	--container-width-md: 90%;
+	--container-width-sm: 94%;
+
+
+    --transition: all 400ms ease;
+}
+
+body{
+   font-family: "Montserrat", sans-serif;
+   line-height: 1.7;
+   color: var(--color-white);
+   background-color: var(--color-bg);
+}
+.container{
+	width: var(--container-width-lg);
+	margin: 0 auto;
+}
+section{
+	padding: 6rem 0;
+
+}
+section h2{
+	text-align: center;
+	margin-bottom: 4rem;
+}
+h1,h2,h3,h4,h5{
+	line-height: 1.2;
+}
+h1{
+	font-size: 2.4rem;
+}
+h2{
+	font-size: 2rem;
+}
+h3{
+	font-size: 1.6rem;
+}
+h4{
+	font-size: 1.3rem;
+}
+a{
+	color: var(--color-white);
+}
+img{
+	width: 100%;
+	display: block;
+	object-fit: cover;
+}
+.btn{
+	display: inline-block;
+	background: var(--color-white);
+	color: var(--color-black);
+	padding: 1rem 2rem;
+	border: 1px solid transparent;
+	font-weight: 500;
+}
+.btn:hover{
+	background: transparent;
+	color: var(--color-white);
+	border-color: var(--color-white);
+
+}
+.btn-primary{
+	background-color: var(--color-danger);
+	color: var(--color-white);
+}
+
+
+/* Navigation bar*/
+
+nav{
+	background-color: transparent;
+	width: 100vw;
+	height: 5rem;
+	position: fixed;
+	top: 0;
+	z-index: 11;
+}
+
+
+/* Change navigation bar style on scroll using javascript*/
+.window-scroll{
+	background: var(--color-primary);
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+	transition: /*var(--transition)*/ 2s;
+}
+
+
+.nav_container{
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/*Logo*/
+.nav_container a h4{
+animation: shadow 5s linear infinite;
+}
+@keyframes shadow{
+	0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+	{
+		color: /*#0e3742*/ #fff;
+		text-shadow: none;
+	}
+	18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+	{
+		color: #fff;
+		text-shadow: 0 0 10px #03bcf4,
+		0 0 20px #03bcf4,
+		0 0 40px #03bcf4,
+		0 0 80px #03bcf4,
+		0 0 160px #03bcf4;
+	}
+
+}
+/**/
+nav button{
+	display: none;
+}
+.nav_menu{
+   display: flex;
+   align-items: center;
+   gap: 4rem;
+}
+.nav_menu a{
+   font-size: 0.9rem;
+   transition: var(--transition);
+}
+.nav_menu a:hover{
+   color: var(--color-bg2); 
+}
+
+/*header*/
+
+header{
+	position: relative;
+	top: 5rem;
+	overflow: hidden;
+	height: 70vh;
+	margin-bottom: 5rem;
+}
+.header_container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 5rem;
+	height: 100%;
+}
+.header_left p{
+	margin: 1rem 0 2.4rem;
+}
+
+/*    Categories    */
+.categories{
+	background: var(--color-bg1);
+	height: 29rem;
+}
+.categories h1{
+	line-height: 1;
+	margin-bottom: 3rem;
+}
+.categories_container{
+	display: grid;
+	grid-template-columns: 40% 60%;
+	/*gap: 4rem;*/
+}
+.categories_left{
+    margin: 3rem;
+}
+.categories_left p{
+    margin: 1rem 0 3rem;
+}
+.categories_right{
+    display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.2rem;
+}
+.category{
+	background-color: var(--color-bg2);
+	padding: 2rem;
+	border-radius: 2rem;
+	transition: var(--transition);
+}
+.category:hover{
+	box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+	z-index: 1;
+}
+
+.category:nth-child(2) .category_icon{
+	background: var(--color-danger);
+}
+.category:nth-child(3) .category_icon{
+	background: var(--color-success);
+}
+.category:nth-child(4) .category_icon{
+	background: var(--color-warning);
+}
+.category:nth-child(5) .category_icon{
+	background: var(--color-success);
+}
+.category:nth-child(6) .category_icon{
+	background: var(--color-danger);
+}
+
+.category_icon{
+	background: var(--color-primary);
+	padding: 0.7rem;
+	border-radius: 0.9rem;
+}
+.category h5{
+    margin: 2rem 0 1rem;
+}
+.category p{
+	font-size: 0.8rem;
+}
+
+
+/*Popular courses*/
+
+.courses{
+	margin-top: 10rem;
+}
+.courses_container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
+.course{
+	background: var(--color-bg1);
+	text-align: center;
+	border: 1px solid transparent;
+}
+.course:hover{
+	background: transparent;
+	border-color: var(--color-primary);
+	transition: var(--transition);
+}
+.course_info{
+	padding: 2rem;
+}
+.course_info p{
+margin: 1.2rem 0 2rem;
+font-size: 0.9rem;
+}
+
+
+/* Faqs*/
+.faqs{
+	background: var(--color-bg1);
+	box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+.faqs_container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+}
+.faq{
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	gap: 1.4rem;
+	height: fit-content;
+	background: var(--color-primary);
+	cursor: pointer;
+}
+.faq h4{
+   font-size: 1rem; 
+   line-height: 2.2;
+}
+.faq_icon{
+   align-self: flex-start;
+   font-size: 1.2rem; 
+}
+.faq p{
+	margin-top: 0.8rem;
+	display: none;
+}
+.faq.open p{
+	display: block;
+}
+
+
+/*STUDENTS' TESTIMONIAL*/
+
+.testimonials_container{
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 5rem;
+}
+.testimonial{
+	padding-top: 2rem;
+}
+.avatar{
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 auto 1rem;
+	border: 1rem solid var(--color-bg1);
+}
+.testimonial_info{
+	text-align: center;
+}
+.testimonial_body{
+	background: var(--color-primary);
+	padding: 2rem;
+	margin-top: 3rem;
+	position: relative;
+}
+.testimonial_body::before{
+	content: '';
+	display: block;
+background: linear-gradient(135deg,
+ transparent, var(--color-primary), 
+              var(--color-primary), 
+              var(--color-primary));
+	/*background: var(--color-primary);*/
+	width: 3rem;
+	height: 3rem;
+	position: absolute;
+	left: 48%;
+	top: -1.3rem;
+	transform: rotate(45deg);
+}
+
+
+/* Footer*/
+
+
+footer{
+	background: var(--color-bg1);
+	padding-top: 5rem;
+	font-size: 0.9rem; 
+}
+.footer_container{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 5rem;
+}
+.footer_container > div h4{
+     margin-bottom: 1.2rem;
+}
+.footer_1 p{
+   margin: 0 0 2rem;
+}
+footer ul li{
+	     margin-bottom: 0.7rem;
+}
+footer ul li a:hover{
+	  text-decoration: underline;
+
+}
+.footer_logo{
+	animation: shadow 5s linear infinite;
+
+}
+@keyframes shadow{
+	0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+	{
+		color: /*#0e3742*/ #fff;
+		text-shadow: none;
+	}
+	18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+	{
+		color: #fff;
+		text-shadow: 0 0 10px #03bcf4,
+		0 0 20px #03bcf4,
+		0 0 40px #03bcf4,
+		0 0 80px #03bcf4,
+		0 0 160px #03bcf4;
+	}
+}
+.social-media{
+	display: flex;
+	gap: 1rem;
+	font-size: 1.2rem;
+	margin-top: 2rem;
+}
+.social-media ion-icon:hover{
+	color: red;
+}
+
+.copyright{
+	width: 550%;
+	text-align: center;
+  margin-top: 4rem;
+	padding: 1.2rem 0;
+	border-top: 4px solid var(--color-bg2);
+}
+
+.container{
+	opacity: 0;
+	transition: all 2s;
+}
+.show{
+	opacity: 1;
+}
+
+/*     media query     */
+
+
+@media screen and (max-width: 1024px){
+   body{
+   	width: var(--container-width-md)
+   }
+   h1{
+	font-size: 2.2rem;
+   }
+   h2{
+	font-size: 1.7rem;
+   }
+   h3{
+	font-size: 1.4rem;
+    }
+    h4{
+	font-size: 1.2rem;
+    }
+
+/*   navbar     */
+
+   nav button{
+   	display: inline-block;
+   	background: transparent;
+   	font-size: 1.8rem;
+   	color: var(--color-white);
+   	cursor: pointer;
+   	margin-right: 1rem;
+   }
+   nav button#close-menu-btn{
+   	display: none;
+   }
+   .nav_menu{
+   	position: fixed;
+   	top: 5rem;
+   	right: 5%;
+   	height: fit-content;
+   	width: 18rem;
+   	flex-direction: column;
+   	gap: 0;
+   	display: none;
+   }
+
+   .nav_menu li{
+   	width: 100%;
+   	height: 5.8rem;
+   	animation: animateNavItems 400ms linear forwards;
+   	transform-origin: top right;
+   	opacity: 0;
+
+   }
+   .nav_menu li:nth-child(2){
+   	animation-delay: 200ms;
+   }
+   .nav_menu li:nth-child(3){
+   	animation-delay: 400ms;
+   }
+   .nav_menu li:nth-child(4){
+   	animation-delay: 600ms;
+   }
+
+   @keyframes animateNavItems{
+       0%
+       {
+          transform: rotateZ(-50deg) rotateX(90deg) scale(0.1);
+       }
+       100%
+       {
+       	transform: rotateZ(0) rotateX(0) scale(1);
+       	opacity: 1;
+       }
+   }
+
+   .nav_menu li a{
+   	background: var(--color-primary);
+   	box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+   	width: 100%;
+   	height: 100%;
+   	display: grid;
+   	place-items: center;
+   }
+   .nav_menu li a:hover{
+   	background: var(--color-bg2);
+   	color: var(--color-white);
+   }
+
+   /*      Header     */
+
+   header{
+   	height: 100vh;
+   	margin-bottom: 5rem;
+   }
+   .header_container{
+   	grid-template-columns: 1fr;
+   	gap: 0.1rem;
+   	padding-bottom: 3rem;
+   	text-align: center;
+   	margin-top: 2rem;
+
+   }
+
+
+/*    Categories    */
+
+   .categories{
+   	height: auto;
+   }
+   .categories_container{
+   	grid-template-columns: 1fr;
+   	gap: 3rem;
+   }
+   .categories_left{
+   	margin-right: 0;
+   }
+
+
+   /*     Popular courses   */
+
+   .courses{
+	margin-top: 0;
+   }
+   .courses_container{
+   	grid-template-columns: 1fr 1fr;
+   }
+
+
+   /*     Faqs   */
+
+   .faqs_container{
+   	grid-template-columns: 1fr;
+   }
+   .faq{
+   	padding: 1.5rem;
+   }
+
+    /*     Footer   */
+
+    
+    .footer_container{
+       grid-template-columns: 1fr 1fr;
+    }
+    .copyright{
+	width: 250%;
+	text-align: center;
+  margin-top: 4rem;
+	padding: 1.2rem 0;
+	border-top: 4px solid var(--color-bg2);
+   }
+}
+
+@media screen and (max-width: 600px) {
+	.container{
+		width: var(--container-width-sm);
+	}
+
+
+	/*     NavBar   */
+
+	.nav_menu{
+		right: 3%;
+	}
+
+
+	/*     Header   */
+    
+    header{
+    	height: 100vh;
+    }
+    .header_container{
+    	grid-template-columns: 1fr;
+    	text-align: center;
+    	margin-top: 2rem;
+    }
+    .header_left p{
+    	margin-bottom: 1.3rem;
+    }
+
+
+	/*     Categories   */
+
+
+    .categories_right{
+      	grid-template-columns: 1fr 1fr;
+      	gap: 0.7rem;
+
+    }
+    .category{
+       padding: 1rem;
+       border-radius: 1rem;
+    }
+    .category_icon{
+    	margin-top: 4px;
+    	display: inline-block;
+    }
+
+
+    /*        popular Courses    */
+
+
+   .courses_container{
+   	grid-template-columns: 1fr;
+   }
+
+
+   /*        Testimonial     */
+
+   .testimonial_body{
+   	padding: 1.2rem;
+   }
+
+
+   /*        Footer    */
+  
+ 
+   .footer_container{
+     grid-template-columns: 1fr;
+     text-align: center;
+     gap: 2rem;
+   }
+   .footer_1 p{
+
+   }
+   .social-media{
+   	justify-content: center;
+   }
+   .copyright{
+	width: 100%;
+	text-align: center;
+  margin-top: 4rem;
+	padding: 1.2rem 0;
+	border-top: 4px solid var(--color-bg2);
+   }
+
+</style>
+</head>
+<body>
+  <nav>
+  	<div class="container nav_container">
+  		<a href="index.html"><h4>MOR.university</h4></a>
+  		<ul class="nav_menu">
+  			<li><a href="index.html">Home</a></li>
+  			<li><a href="courses.html">Courses</a></li>
+  			<li><a href="about.html">About</a></li>
+  			<li><a href="contact.html">Contact</a></li>
+  		</ul>
+  		<button id="open-menu-btn"><ion-icon name="list-outline"></ion-icon></button>
+  		<button id="close-menu-btn"><ion-icon name="close-outline"></ion-icon></button>
+  	</div>
+  </nav>
+
+  <header>
+  	<div class="container header_container">
+  		<div class="header_left">
+  			<h1> Grow your skills to advance your career path</h1>
+  			<p>there is a lot of courses. They can help you to move from beginner to master in your domain. After finishing your courses, our e-university give you a recognized certification  worldwide</p>
+  			<a href="file:///C:/Users/Dahmouni/Documents/eduction%20school%20web%20site/courses.html" class="btn btn-primary">Start courses</a>
+  		</div>
+
+  		<div class="header_right">
+  			<div header_right-image>
+  				<img src="students.png">
+  			</div>
+  		</div>
+  	</div>
+  </header>
+
+  <!-- Section categories-->
+
+<section class="categories">
+	<div class="container categories_container">
+		<div class="categories_left">
+			<h1>Categories</h1>
+			<p> Shoose now your preferable categorie,start learning and acheive your dream job. It will only takes a few seconds to start your adventure.</p>
+			<a href="" class="btn">Learn More</a>
+		</div>
+		<div class="categories_right">
+			<article class="category">
+				<span class="category_icon"><ion-icon name="logo-bitcoin"></ion-icon></span>
+				<h5>Learn programing</h5>
+				<p>If this is your preferable category, start now and enjoy courses. </p>
+			</article>
+						
+			<article class="category">
+				<span class="category_icon"><ion-icon name="logo-bitcoin"></ion-icon></span>
+				<h5>Learn e-commerce</h5>
+				<p>If this is your preferable category, start now and enjoy courses. </p>
+			</article>
+						
+			<article class="category">
+				<span class="category_icon"><ion-icon name="logo-bitcoin"></ion-icon></span>
+				<h5>Learn dropshipping</h5>
+				<p>If this is your preferable category, start now and enjoy courses. </p>
+			</article>
+
+			<article class="category">
+				<span class="category_icon"><ion-icon name="logo-bitcoin"></ion-icon></span>
+				<h5>Affiliate Marketing</h5>
+				<p>If this is your preferable category, start now and enjoy courses. </p>
+			</article>
+						
+			<article class="category">
+				<span class="category_icon"><ion-icon name="logo-bitcoin"></ion-icon></span>
+				<h5>Solde paypal</h5>
+				<p>If this is your preferable category, start now and enjoy courses. </p>
+			</article>
+
+			<article class="category">
+				<span class="category_icon"><ion-icon name="logo-bitcoin"></ion-icon></span>
+				<h5>Get money from Netflix</h5>
+				<p>If this is your preferable category, start now and enjoy courses. </p>
+			</article>
+
+			
+		</div>
+	</div>
+</section>
+
+
+<!-- Courses-->
+
+
+<section class="courses">
+	<h2>Our polular Courses</h2>
+	<div class="container courses_container">
+		<article class="course">
+			<div class="courses_image">
+				<img src="boy1.jpg">
+			</div>
+			<div class="course_info">
+				<h4>Responsive social media Website UI Design</h4>
+				<p>This is one the most popular course on our platforme </p>	
+				
+				<a href="" class="btn btn-primary">Learn More
+				</a>
+
+			</div>
+		</article>
+
+		<article class="course">
+			<div class="courses_image">
+				<img src="boy1.jpg">
+			</div>
+			<div class="course_info">
+				<h4>Responsive social media Website UI Design</h4>
+				<p>This is one the most popular course on our platforme </p>	
+				
+				<a href="" class="btn btn-primary">Learn More
+				</a>
+				
+			</div>
+		</article>
+
+		<article class="course">
+			<div class="courses_image">
+				<img src="boy1.jpg">
+			</div>
+			<div class="course_info">
+				<h4>Responsive social media Website UI Design</h4>
+				<p>This is one the most popular course on our platforme </p>	
+				
+				<a href="" class="btn btn-primary">Learn More
+				</a>
+				
+			</div>
+		</article>
+	</div>
+</section>
+ 
+
+ <!-- fAQS-->
+
+ <section class="faqs">
+ 	<h2>Frequently Asked Questions</h2>
+ 	<div class="conainer faqs_container">
+
+ 		<article class="faq">
+ 			<div class="faq_icon"><ion-icon name="add-outline"></div>
+ 			<div class="question_answer">
+ 				<h4>How do I the right courses for me ?</h4>
+ 				<p>All domains are great. You may just have discpline and desire to complet a course. All domains are great. You may just have discpline and desire to complet a course. All domains are great. You may just have discpline and desire to complet a course.   </p>
+ 			</div>
+ 		</article>
+
+ 		<article class="faq">
+ 			<div class="faq_icon"><ion-icon name="add-outline"></ion-icon></div>
+ 			<div class="question_answer">
+ 				<h4>How do I the right courses for me ?</h4>
+ 				<p>All domains are great. You may just have discpline and desire to complet a course. All domains are great. You may just have discpline and desire to complet a course. All domains are great. You may just have discpline and desire to complet a course.  </p>
+ 			</div>
+ 		</article>
+
+ 		<article class="faq">
+ 			<div class="faq_icon"><ion-icon name="add-outline"></ion-icon></div>
+ 			<div class="question_answer">
+ 				<h4>How do I the right courses for me ?</h4>
+ 				<p>All domains are great. You may just have discpline and desire to complet a course. All domains are great. You may just have discpline and desire to complet a course. All domains are great. You may just have discpline and desire to complet a course.  </p>
+ 			</div>
+ 		</article>
+
+ 		<article class="faq">
+ 			<div class="faq_icon"><ion-icon name="add-outline"></ion-icon></div>
+ 			<div class="question_answer">
+ 				<h4>How do I the right courses for me ?</h4>
+ 				<p>All domains are great. You may just have discpline and desire to complet a course. All domains are great. You may just have discpline and desire to complet a course. All domains are great. You may just have discpline and desire to complet a course. </p>
+ 			</div>
+ 		</article>
+
+ 		<article class="faq">
+ 			<div class="faq_icon"><ion-icon name="add-outline"></ion-icon></div>
+ 			<div class="question_answer">
+ 				<h4>How do I the right courses for me ?</h4>
+ 				<p>All domains are great. You may just have discpline and desire to complet a course. All domains are great. You may just have discpline and desire to complet a course. All domains are great. You may just have discpline and desire to complet a course.  </p>
+ 			</div>
+ 		</article>
+
+ 		<article class="faq">
+ 			<div class="faq_icon"><ion-icon name="add-outline"></ion-icon></div>
+ 			<div class="question_answer">
+ 				<h4>How do I the right courses for me ?</h4>
+ 				<p>All domains are great. You may just have discpline and desire to complet a course. All domains are great. You may just have discpline and desire to complet a course. All domains are great. You may just have discpline and desire to complet a course.  </p>
+ 			</div>
+ 		</article>
+ 	</div>
+ </section> 
+
+
+ <!-- testimonials-->
+
+
+<section class="container testimonials_container mySwiper">
+	<h2>Students' Testimonials</h2>
+	<div class="swiper-wrapper">
+		<article class="testimonial swiper-slide">
+			<div class="avatar">
+				<img src="boy1.jpg">
+				
+			</div>
+			<div class="testimonial_info">
+				<h5>Eren yeager</h5>
+				<small>Student</small>
+			</div>
+			<div class="testimonial_body">
+				<p>This one of the students' testimonial. You would like our platforme. click quicly on the button -courses- to start learning. </p>		
+			</div>
+		</article>
+
+			<article class="testimonial swiper-slide">
+			<div class="avatar">
+				<img src="boy3.png">
+				
+			</div>
+			<div class="testimonial_info">
+				<h5>Diaz col</h5>
+				<small>Student</small>
+			</div>
+			<div class="testimonial_body">
+				<p>This one of the students' testimonial. You would like our platforme. click quicly on the button -courses- to start learning. </p>		
+			</div>
+		</article>
+
+			<article class="testimonial swiper-slide">
+			<div class="avatar">
+				<img src="girl2.jpg">
+				
+			</div>
+			<div class="testimonial_info">
+				<h5>Diana Ayi</h5>
+				<small>Student</small>
+			</div>
+			<div class="testimonial_body">
+				<p>This one of the students' testimonial. You would like our platforme. click quicly on the button -courses- to start learning. </p>		
+			</div>
+		</article>
+
+		<article class="testimonial swiper-slide">
+			<div class="avatar">
+				<img src="boy1.jpg">
+				
+			</div>
+			<div class="testimonial_info">
+				<h5>Eren yeager</h5>
+				<small>Student</small>
+			</div>
+			<div class="testimonial_body">
+				<p>This one of the students' testimonial. You would like our platforme. click quicly on the button -courses- to start learning. </p>		
+			</div>
+		</article>
+
+			<article class="testimonial swiper-slide">
+			<div class="avatar">
+				<img src="boy3.png">
+				
+			</div>
+			<div class="testimonial_info">
+				<h5>Diaz col</h5>
+				<small>Student</small>
+			</div>
+			<div class="testimonial_body">
+				<p>This one of the students' testimonial. You would like our platforme. click quicly on the button -courses- to start learning. </p>		
+			</div>
+		</article>
+
+			<article class="testimonial swiper-slide">
+			<div class="avatar">
+				<img src="girl2.jpg">
+				
+			</div>
+			<div class="testimonial_info">
+				<h5>Diana Ayi</h5>
+				<small>Student</small>
+			</div>
+			<div class="testimonial_body">
+				<p>This one of the students' testimonial. You would like our platforme. click quicly on the button -courses- to start learning. </p>		
+			</div>
+		</article>
+	</div>
+	  <div class="swiper-pagination"></div>
+</section>
+
+<footer>
+	<div class="container footer_container">
+		<div class="footer_1">
+			<a href="" class="footer_logo"><h4>Mor.University</h4></a>
+			<p>You welcome in our e-university. You deserve better. That's why the Morroccan.University is the best for you.</p>
+		</div>
+
+		<div class="footer_2">
+			<h4>Permalinks</h4>
+			<ul class="permalinks">
+  			<li><a href="index.html">Home</a></li>
+  			<li><a href="courses.html">Courses</a></li>
+  			<li><a href="about.html">About</a></li>
+  			<li><a href="contact.html">Contact</a></li>
+  		</ul>
+		</div>
+        
+        <div class="footer_3">
+			<h4>Privacy</h4>
+			<ul class="privacy">
+  			<li><a href="">Privacy Policy</a></li>
+  			<li><a href="">Terms and conditions</a></li>
+  			<li><a href="">Refund Policy</a></li>
+  		</ul>
+		</div>
+
+		<div class="footer_4">
+			<h4>Contact Us</h4>
+			<div>
+				<p>0569806890</p>
+				<p>dyaz5470@gmail.com</p>
+			</div>
+
+			<ul class="social-media">
+				<li><a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+
+				<li><a href=""><ion-icon name="logo-instagram"></ion-icon></a></li>
+
+				<li><a href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
+
+				<li><a href=""><ion-icon name="logo-youtube"></ion-icon></a></li>
+			</ul>
+		</div>
+
+  <div class="copyright">
+		<p>“Copyright.” Shpeer.com, file:///C:/Users/Dahmouni/Documents/E-Commerce%20Web%20Site/E-Commerce%20Web%20Site.html. Accessed 8 Aug. 2022.</p>
+</div>
+</footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!-- cdn swiper-->
+<!-- cdn swiper-->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<script type="text/javascript">
+	window.addEventListener('scroll', () =>{
+		document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 0)
+	})
+
+// show and hide faq paragraphe
+
+  const faqs = document.querySelectorAll('.faq');
+
+  faqs.forEach(faq => {
+  	faq.addEventListener('click', () => {
+  		faq.classList.toggle('open');
+
+       //Change icon    //<ion-icon name="remove-outline"></ion-icon> 
+
+  const icon = faq.querySelector('.faq_icon ion-icon');
+     if (icon.className === 'add-outline') {
+     	icon.className = "remove-outline"
+     } else{
+     	icon.className = "add-outline"; 
+     }
+
+  	})
+  })
+
+  // show and hide Nav bar/ media query
+
+const menu = document.querySelector(".nav_menu");
+const menuBtn = document.querySelector("#open-menu-btn");
+const closeBtn = document.querySelector("#close-menu-btn");
+
+menuBtn.addEventListener('click', () => {
+	menu.style.display = "flex";
+	closeBtn.style.display = "inline-block";
+	menuBtn.style.display = "none";
+})
+
+  // close nav menu
+
+  const closeNav = () => {
+  	menu.style.display = "none";
+	closeBtn.style.display = "none";
+	menuBtn.style.display = "inline-block";
+  }
+
+  closeBtn.addEventListener('click', closeNav)
+
+  	
+</script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!-- cdn swiper-->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+	// Swiper code
+
+  var swiper = new Swiper(".mySwiper", {
+  	slidesPerView: 1;
+  	spaceBetween: 30,
+  	pagination: {
+  		el: ".swiper-pagination",
+  		clickable: true,
+  	},
+  	
+  	// when window width is >= 600px
+
+  	breakpoints: {
+  		600: {
+  			slidesPerView: 2
+  		}
+  	}
+  });
+</script>
+
+<script type="text/javascript">
+	const observer = new IntersectionObserver((entries) => {
+       entries.forEach((entry) => {
+          console.log(entry)
+          if (entry.isIntersecting) {
+          	  entry.target.classList.add('show');
+          } else {
+              entry.target.classList.remove('show');
+          }
+
+       });
+
+	});
+const hiddentElements = document.querySelectorAll('.container');
+hiddentElements.forEach((el) => observer.observe(el));
+
+</script>
+</body>
+</html>
